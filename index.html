@@ -6,21 +6,414 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-		<title>Git va Github darslari</title>
+		<meta
+			name="description"
+			content="Git va GitHub'ni amaliy misollar bilan o‘rganing. Versiya nazorati, branch va bir kompyuterda ikkita akkaunt bilan ishlash."
+		/>
+		<meta
+			name="theme-color"
+			content="#f4f3ed"
+		/>
+		<title>Gitni tushun. GitHub’da ishonch bilan ishlang.</title>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
 		<link
 			rel="stylesheet"
 			href="./main.css"
 		/>
 	</head>
 	<body>
-		<h1>Git va Github darslari</h1>
-		<p>
-			Bu — shunchaki qo‘shimcha imkoniyat emas, balki amalda juda kerakli
-			funksiya. Ish loyihalarida korporativ email, shaxsiy loyihalarda esa o‘z
-			emailingizdan foydalanish kerak bo‘lsa, aynan shu sozlama qo‘l keladi.
-			Seriyaning oxirgi qismida bitta kompyuterda ikkita GitHub akkaunt bilan
-			ularni aralashtirmasdan ishlashni ham amalda ko‘rib chiqamiz.
-		</p>
+		<header class="site-header">
+			<a
+				class="brand"
+				href="#bosh-sahifa"
+				aria-label="Git Yo‘li, bosh sahifa"
+			>
+				<span
+					class="brand-mark"
+					aria-hidden="true"
+				>
+					g
+				</span>
+				<span>
+					git
+					<span class="brand-light">/yo‘li</span>
+				</span>
+			</a>
+			<button
+				class="menu-toggle"
+				type="button"
+				aria-expanded="false"
+				aria-label="Menyuni ochish"
+			>
+				<span></span>
+				<span></span>
+			</button>
+			<nav
+				class="site-nav"
+				aria-label="Asosiy menyu"
+			>
+				<a href="#dastur">Dastur</a>
+				<a href="#amaliyot">Amaliyot</a>
+				<a href="#savollar">Savollar</a>
+				<a
+					class="nav-cta"
+					href="#darslar"
+				>
+					Darslarni ko‘rish
+					<span aria-hidden="true">↘</span>
+				</a>
+			</nav>
+		</header>
+		<main id="bosh-sahifa">
+			<section class="hero page-wrap">
+				<div class="hero-copy">
+					<p class="eyebrow">
+						<span class="eyebrow-dot"></span>
+						KOD BILAN ISHLASHNING MUSTAHKAM ASOSI
+					</p>
+					<h1>
+						Gitni tushun.
+						<br />
+						<span>GitHub’da</span>
+						ishonch bilan ishlang.
+					</h1>
+					<p class="hero-description">
+						Loyihangizdagi o‘zgarishlarni boshqaring, jamoa bilan tartibli
+						ishlang va akkauntlar aralashib ketishidan xavotir olmang.
+					</p>
+					<div class="hero-actions">
+						<a
+							class="button button-dark"
+							href="#dastur"
+						>
+							Dastur bilan tanishish
+							<span aria-hidden="true">↘</span>
+						</a>
+						<a
+							class="text-link"
+							href="#amaliyot"
+						>
+							Amaliy misol
+							<span aria-hidden="true">→</span>
+						</a>
+					</div>
+					<div class="hero-note">
+						<div
+							class="note-icon"
+							aria-hidden="true"
+						>
+							{ }
+						</div>
+						<p>
+							<strong>Nazariya emas, ish jarayoni.</strong>
+							<br />
+							Har bir mavzuni terminalda sinab ko‘ring.
+						</p>
+					</div>
+				</div>
+				<div class="hero-visual">
+					<img
+						src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+						alt="Kompyuter ekranida rangli kod yozilgan dasturchi ish muhiti"
+					/>
+					<div class="visual-shade"></div>
+					<div class="visual-label">
+						<span class="status-pip"></span>
+						TERMINALDA AMALIYOT
+					</div>
+					<div
+						class="terminal-card"
+						aria-label="Terminalda Git buyrug‘i misoli"
+					>
+						<div class="terminal-top">
+							<span></span>
+							<span></span>
+							<span></span>
+							<small>~/loyiha</small>
+						</div>
+						<p>
+							<span class="terminal-prompt">$</span>
+							git status
+						</p>
+						<p class="terminal-result">
+							On branch main
+							<br />
+							nothing to commit, working tree clean
+						</p>
+					</div>
+					<div class="image-caption">
+						<span>01 / 04</span>
+						<span>O‘zgarishlarni kuzatishdan boshlang</span>
+					</div>
+				</div>
+			</section>
+			<section
+				class="ticker"
+				aria-label="Kurs mavzulari"
+			>
+				<div class="ticker-track">
+					<span>VERSIYA NAZORATI</span>
+					<i></i>
+					<span>BRANCH VA MERGE</span>
+					<i></i>
+					<span>GITHUB WORKFLOW</span>
+					<i></i>
+					<span>AKKAUNTLARNI AJRATISH</span>
+					<i></i>
+					<span>VERSIYA NAZORATI</span>
+				</div>
+			</section>
+			<section
+				class="program section-wrap"
+				id="dastur"
+			>
+				<div class="section-heading">
+					<div>
+						<p class="eyebrow">BOSQICHMA-BOSQICH</p>
+						<h2>
+							Kodingiz tartibli,
+							<br />
+							ish jarayoningiz
+							<span>aniq.</span>
+						</h2>
+					</div>
+					<p class="section-intro">
+						Har bir mavzu keyingisiga zamin yaratadi. Asosiy buyruqlardan
+						boshlab, kundalik ishda kerak bo‘ladigan sozlamalargacha.
+					</p>
+				</div>
+				<div
+					class="lesson-list"
+					id="darslar"
+				>
+					<article class="lesson-row">
+						<span class="lesson-number">01</span>
+						<div class="lesson-title">
+							<h3>Git bilan tanishuv</h3>
+							<p>Repository, commit va o‘zgarishlar tarixi</p>
+						</div>
+						<span class="lesson-tag">ASOSLAR</span>
+						<span
+							class="lesson-arrow"
+							aria-hidden="true"
+						>
+							↗
+						</span>
+					</article>
+					<article class="lesson-row">
+						<span class="lesson-number">02</span>
+						<div class="lesson-title">
+							<h3>Branch va jamoaviy ish</h3>
+							<p>Alohida yo‘nalishda ishlash, merge qilish</p>
+						</div>
+						<span class="lesson-tag">HAMKORLIK</span>
+						<span
+							class="lesson-arrow"
+							aria-hidden="true"
+						>
+							↗
+						</span>
+					</article>
+					<article class="lesson-row">
+						<span class="lesson-number">03</span>
+						<div class="lesson-title">
+							<h3>GitHub bilan ishlash</h3>
+							<p>Remote repository, push, pull va clone</p>
+						</div>
+						<span class="lesson-tag">GITHUB</span>
+						<span
+							class="lesson-arrow"
+							aria-hidden="true"
+						>
+							↗
+						</span>
+					</article>
+					<article class="lesson-row lesson-row-featured">
+						<span class="lesson-number">04</span>
+						<div class="lesson-title">
+							<h3>Bitta qurilma, ikki akkaunt</h3>
+							<p>Ish va shaxsiy loyihalarni chalkashtirmasdan yuritish</p>
+						</div>
+						<span class="lesson-tag">AMALIY SOZLAMA</span>
+						<span
+							class="lesson-arrow"
+							aria-hidden="true"
+						>
+							↗
+						</span>
+					</article>
+				</div>
+			</section>
+			<section
+				class="practice"
+				id="amaliyot"
+			>
+				<div class="practice-inner section-wrap">
+					<div class="practice-copy">
+						<p class="eyebrow eyebrow-light">MUHIM AMALIY QISM</p>
+						<h2>
+							Ish va shaxsiy kod.
+							<br />
+							<span>Har biri o‘z joyida.</span>
+						</h2>
+						<p>
+							Bitta kompyuterda ikki GitHub akkaunt bilan ishlash mumkin.
+							Muhimi, Git qaysi loyiha uchun qaysi ism va emaildan
+							foydalanishini aniq bilsin.
+						</p>
+						<div class="practice-points">
+							<div>
+								<span>01</span>
+								<p>
+									<strong>Git identifikatsiyasi</strong>
+									<br />
+									Har bir repository uchun muallif ma’lumotini belgilang.
+								</p>
+							</div>
+							<div>
+								<span>02</span>
+								<p>
+									<strong>SSH kalitlari</strong>
+									<br />
+									Akkauntlarga alohida ulanish kalitlarini sozlang.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="code-panel">
+						<div class="code-panel-head">
+							<span>LOYIHA ICHIDA</span>
+							<button
+								class="copy-button"
+								type="button"
+								aria-label="Git sozlamalarini nusxalash"
+								title="Buyruqlarni nusxalash"
+							>
+								<span
+									class="copy-icon"
+									aria-hidden="true"
+								></span>
+								<span class="copy-label">Nusxalash</span>
+							</button>
+						</div>
+						<pre><code><span class="code-comment"># Ish loyihasi uchun</span>
+git config user.name <span class="code-string">"Ism Familiya"</span>
+git config user.email <span class="code-string">"ish@email.com"</span>
+
+<span class="code-comment"># Sozlamani tekshirish</span>
+git config --local --list</code></pre>
+						<div class="code-panel-foot">
+							<span class="code-check">✓</span>
+							<span>Faqat shu repository uchun amal qiladi</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section
+				class="faq section-wrap"
+				id="savollar"
+			>
+				<div class="faq-heading">
+					<p class="eyebrow">BOSHLASHDAN OLDIN</p>
+					<h2>
+						Ko‘p so‘raladigan
+						<br />
+						savollar.
+					</h2>
+				</div>
+				<div class="faq-list">
+					<details>
+						<summary>
+							Git va GitHub bir xil narsami?
+							<span aria-hidden="true">+</span>
+						</summary>
+						<p>
+							Yo‘q. Git kompyuteringizdagi versiyalarni boshqaradi. GitHub esa
+							Git repositorylarini internetda saqlash va boshqalar bilan
+							hamkorlik qilish xizmatidir.
+						</p>
+					</details>
+					<details>
+						<summary>
+							Ikki akkaunt uchun ikkita kompyuter kerakmi?
+							<span aria-hidden="true">+</span>
+						</summary>
+						<p>
+							Kerak emas. SSH konfiguratsiyasi va repositoryga xos Git
+							identifikatsiyasi orqali ish va shaxsiy akkauntlarni bitta
+							qurilmada alohida ishlatish mumkin.
+						</p>
+					</details>
+					<details>
+						<summary>
+							Darslarni boshlash uchun nimalar kerak?
+							<span aria-hidden="true">+</span>
+						</summary>
+						<p>
+							Kompyuteringizda Git o‘rnatilgan bo‘lsa kifoya. GitHub akkaunti
+							keyingi masofaviy repository mavzularida kerak bo‘ladi.
+						</p>
+					</details>
+				</div>
+			</section>
+			<section class="closing-cta">
+				<div class="closing-inner section-wrap">
+					<div>
+						<p class="eyebrow">KEYINGI QADAM</p>
+						<h2>
+							Terminalni oching.
+							<br />
+							Birinchi commitni
+							<span>bugun</span>
+							qiling.
+						</h2>
+					</div>
+					<a
+						class="button button-light"
+						href="#dastur"
+					>
+						Darslar dasturiga qaytish
+						<span aria-hidden="true">↑</span>
+					</a>
+				</div>
+			</section>
+		</main>
+		<footer class="site-footer">
+			<a
+				class="brand"
+				href="#bosh-sahifa"
+			>
+				<span
+					class="brand-mark"
+					aria-hidden="true"
+				>
+					g
+				</span>
+				<span>
+					git
+					<span class="brand-light">/yo‘li</span>
+				</span>
+			</a>
+			<p>O‘rganing. Sinab ko‘ring. Versiyalarni boshqaring.</p>
+			<a href="#bosh-sahifa">Yuqoriga ↑</a>
+		</footer>
+		<div
+			class="toast"
+			role="status"
+			aria-live="polite"
+		></div>
 		<script src="./app.js"></script>
 	</body>
 </html>
